@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Smaller Docker images — copies only needed files into standalone/
+  output: "standalone",
 };
 
 export default nextConfig;

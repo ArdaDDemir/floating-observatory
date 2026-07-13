@@ -13,7 +13,8 @@ export default function AppleIcon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#020617",
+          background:
+            "radial-gradient(circle at 50% 40%, #0c4a6e 0%, #020617 100%)",
           borderRadius: 36,
         }}
       >
@@ -22,8 +23,8 @@ export default function AppleIcon() {
             width: 72,
             height: 72,
             transform: "rotate(45deg)",
-            background: "linear-gradient(135deg, #38bdf8, #818cf8)",
-            boxShadow: "0 0 28px rgba(56,189,248,0.65)",
+            background: "linear-gradient(135deg, #7dd3fc, #38bdf8, #6366f1)",
+            boxShadow: "0 0 28px rgba(56,189,248,0.7)",
           }}
         />
       </div>

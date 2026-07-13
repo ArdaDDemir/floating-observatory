@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Floating Observatory">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="65%">
+      <stop offset="0%" stop-color="#0c4a6e"/>
+      <stop offset="55%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </radialGradient>
+    <linearGradient id="core" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="45%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="island" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+  <!-- Soft stars -->
+  <circle cx="92" cy="88" r="2" fill="#e0f2fe" opacity="0.55"/>
+  <circle cx="420" cy="120" r="1.6" fill="#e0f2fe" opacity="0.45"/>
+  <circle cx="380" cy="400" r="2" fill="#e0f2fe" opacity="0.35"/>
+  <circle cx="120" cy="420" r="1.4" fill="#e0f2fe" opacity="0.4"/>
+  <!-- Orbit ring -->
+  <ellipse cx="256" cy="310" rx="150" ry="42" fill="none" stroke="#22d3ee" stroke-width="6" opacity="0.55"/>
+  <ellipse cx="256" cy="310" rx="150" ry="42" fill="none" stroke="#67e8f9" stroke-width="2" opacity="0.9"/>
+  <!-- Island cone under -->
+  <path d="M176 300 L256 430 L336 300 Z" fill="#78350f" opacity="0.85"/>
+  <!-- Island top -->
+  <ellipse cx="256" cy="292" rx="108" ry="36" fill="url(#island)"/>
+  <ellipse cx="256" cy="284" rx="92" ry="28" fill="#86efac" opacity="0.35"/>
+  <!-- Core glow -->
+  <g filter="url(#glow)">
+    <path d="M256 120 L320 200 L256 280 L192 200 Z" fill="url(#core)"/>
+    <path d="M256 120 L320 200 L256 200 Z" fill="#bae6fd" opacity="0.35"/>
+  </g>
+  <!-- Core highlight -->
+  <path d="M256 150 L288 200 L256 200 Z" fill="#ffffff" opacity="0.25"/>
+</svg>

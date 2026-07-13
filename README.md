@@ -1,16 +1,19 @@
 <div align="center">
 
+<img src="./public/brand/logo.svg" alt="Floating Observatory logo" width="128" height="128" />
+
 # Floating Observatory
 
 ### Focus sessions that grow a living 3D island
 
-**Pomodoro · Island builder · Streaks · Crew · Sealed saves · PWA**
+**Pomodoro · Island builder · Streaks · Crew · Sealed saves · PWA · Docker**
 
 A deep-work game for **desktop and phone**: complete timed focus quests, earn crystals & energy, place and upgrade structures on a floating island, and come back tomorrow for streak bonuses.
 
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=nextdotjs)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![Three.js](https://img.shields.io/badge/Three.js-R3F-000000?logo=threedotjs)](https://threejs.org/)
+[![Docker](https://img.shields.io/badge/Docker-ready-2496ED?logo=docker&logoColor=white)](./Dockerfile)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](./LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-ArdaDDemir-181717?logo=github)](https://github.com/ArdaDDemir)
@@ -127,6 +130,22 @@ Open **[http://localhost:3000](http://localhost:3000)**
 npm run build
 npm start
 ```
+
+### Docker (one command)
+
+```bash
+# build + run on http://localhost:3000
+docker compose up --build
+```
+
+Or without Compose:
+
+```bash
+docker build -t floating-observatory .
+docker run --rm -p 3000:3000 floating-observatory
+```
+
+Production image uses Next.js **`output: "standalone"`** (see `Dockerfile`).
 
 Deploy anywhere that runs Next.js (Vercel one-click works great):
 

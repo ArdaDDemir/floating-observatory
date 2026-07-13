@@ -30,7 +30,9 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "screenshots": "node scripts/capture-screenshots.mjs"
+    "screenshots": "node scripts/capture-screenshots.mjs",
+    "docker:build": "docker build -t floating-observatory .",
+    "docker:up": "docker compose up --build"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",

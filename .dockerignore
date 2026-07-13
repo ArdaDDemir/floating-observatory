@@ -1,0 +1,39 @@
+# Dependencies & build output
+node_modules
+.next
+out
+build
+coverage
+*.tsbuildinfo
+
+# Git / IDE
+.git
+.gitignore
+.github
+.vscode
+.idea
+*.md
+!README.md
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+
+# Docker (avoid recursive context noise)
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Local tooling / heavy assets not needed in image
+docs/images
+docs/plans
+scripts
+playwright*
+npm-debug.log*
+yarn-error.log*
+.DS_Store
+
+# Dev-only
+AGENTS.md
+CLAUDE.md
