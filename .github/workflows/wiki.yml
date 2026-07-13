@@ -1,0 +1,42 @@
+name: Publish Wiki
+
+on:
+  push:
+    branches: [master, main]
+    paths:
+      - "wiki/**"
+      - ".github/workflows/wiki.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Push wiki/ to GitHub Wiki
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          # Wiki remote only exists after the first page is created in the UI once.
+          if ! git ls-remote "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.wiki.git" HEAD >/dev/null 2>&1; then
+            echo "::warning::Wiki remote missing. Open the Wiki tab, create the first Home page once, then re-run this workflow."
+            exit 0
+          fi
+          rm -rf /tmp/wiki-push
+          git clone "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.wiki.git" /tmp/wiki-push
+          cp -f wiki/*.md /tmp/wiki-push/
+          cd /tmp/wiki-push
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          if git diff --cached --quiet; then
+            echo "No wiki changes"
+            exit 0
+          fi
+          git commit -m "docs: sync wiki from repository"
+          git push

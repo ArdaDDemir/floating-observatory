@@ -18,6 +18,15 @@ export const metadata: Metadata = {
   description:
     "A Pomodoro focus game for phone and desktop: complete deep-work sessions, earn resources, expand your floating island observatory, research tech, and keep a daily streak.",
   applicationName: "Floating Observatory",
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+      { url: "/brand/logo.svg", type: "image/svg+xml" },
+      { url: "/icon", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/apple-icon", type: "image/png", sizes: "180x180" }],
+    shortcut: ["/favicon.png"],
+  },
   appleWebApp: {
     capable: true,
     title: "Observatory",

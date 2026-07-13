@@ -17,10 +17,11 @@ A deep-work game for **desktop and phone**: complete timed focus quests, earn cr
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](./LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-ArdaDDemir-181717?logo=github)](https://github.com/ArdaDDemir)
+[![Wiki](https://img.shields.io/badge/Wiki-docs-blue?logo=github)](https://github.com/ArdaDDemir/floating-observatory/wiki)
 
 *No backend · No account · Progress lives in your browser*
 
-**Author:** [ArdaDDemir](https://github.com/ArdaDDemir) · **Repo:** [floating-observatory](https://github.com/ArdaDDemir/floating-observatory)
+**Author:** [ArdaDDemir](https://github.com/ArdaDDemir) · **Repo:** [floating-observatory](https://github.com/ArdaDDemir/floating-observatory) · **[Wiki](https://github.com/ArdaDDemir/floating-observatory/wiki)**
 
 </div>
 
@@ -194,14 +195,18 @@ public/
 
 ---
 
-## Docs
+## Docs & Wiki
 
 | Doc | What’s inside |
 |-----|----------------|
+| **[GitHub Wiki](https://github.com/ArdaDDemir/floating-observatory/wiki)** | Play guide, buildings, crew, sound, Docker, FAQ |
 | **[docs/GUIDE.md](./docs/GUIDE.md)** | Player-facing systems overview |
 | **[docs/CUSTOMIZING.md](./docs/CUSTOMIZING.md)** | Change economy, buildings, events, branding |
 | **[docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md)** | Data flow, save seal, render pipeline |
+| **[docs/DOCKER.md](./docs/DOCKER.md)** | Docker / Compose |
 | **[CONTRIBUTING.md](./CONTRIBUTING.md)** | Local workflow & PR notes |
+
+Wiki source lives in [`wiki/`](./wiki/) — publish with `pwsh scripts/push-wiki.ps1` after the first wiki page exists on GitHub.
 
 ---
 
