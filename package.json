@@ -33,7 +33,7 @@
     "screenshots": "node scripts/capture-screenshots.mjs",
     "docker:build": "docker build -t floating-observatory .",
     "docker:up": "docker compose up --build",
-    "wiki:push": "pwsh -File scripts/push-wiki.ps1"
+    "wiki:push": "node scripts/bootstrap-wiki.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
