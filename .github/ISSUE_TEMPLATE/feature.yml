@@ -1,0 +1,76 @@
+name: ✨ Feature request
+description: Idea for gameplay, island, mobile, audio, or DX
+title: "[feat] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share an idea that fits the focus-first loop  
+        (no mid-session modals, local-first saves).
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / motivation
+      description: What friction or missing joy are you solving?
+      placeholder: e.g. Hard to see which crew role fits which building…
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How should it work?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      placeholder: Other approaches you thought about…
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      multiple: true
+      options:
+        - Gameplay / economy
+        - Buildings / 3D art
+        - Crew / NPCs
+        - Audio / haptics
+        - Mobile / PWA
+        - Desktop UX
+        - Saves / cloud (optional)
+        - Docker / ops
+        - Docs / wiki
+        - Performance
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Rough effort (your guess)
+      options:
+        - Small (hours)
+        - Medium (days)
+        - Large (week+)
+        - Unsure
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: design-fit
+    attributes:
+      label: Design fit
+      options:
+        - label: Does not require mid-session decisions/modals
+          required: false
+        - label: Works offline / local-first
+          required: false
+        - label: Mobile-friendly
+          required: false

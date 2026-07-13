@@ -1,0 +1,118 @@
+name: 🐛 Bug report
+description: Something broke in the observatory (crash, wrong rewards, UI, save…)
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve **Floating Observatory**.  
+        Please fill the sections below so we can reproduce quickly.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Clear description of the bug.
+      placeholder: e.g. Clicking a building does nothing on mobile Safari…
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: What should have happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps help a lot.
+      placeholder: |
+        1. Open app
+        2. Start a 5s test session
+        3. …
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: true
+      options:
+        - Focus / timer
+        - Build / place / upgrade
+        - Crew / NPCs
+        - Saves / import-export
+        - Audio / haptics
+        - 3D / performance
+        - Mobile UI
+        - Desktop UI
+        - Docker
+        - Docs / wiki
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: Windows 11 / macOS 14 / Android 14 / iOS 17
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser (or Docker)
+      placeholder: Chrome 120 / Firefox / Safari / Edge / docker compose
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device class
+      options:
+        - Desktop
+        - Laptop
+        - Phone
+        - Tablet
+        - Unknown
+    validations:
+      required: true
+
+  - type: dropdown
+    id: mode
+    attributes:
+      label: How did you run the app?
+      options:
+        - npm run dev
+        - npm run build && npm start
+        - Docker / Compose
+        - Deployed (Vercel / other)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Console / network errors
+      description: Paste relevant console stack traces (no secrets / save dumps with personal notes if sensitive).
+      render: shell
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots / extra context
+      description: Drag images here or describe.

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Project Wiki
+    url: https://github.com/ArdaDDemir/floating-observatory/wiki
+    about: Play guide, buildings, crew, Docker, FAQ
+  - name: Discussions (if enabled)
+    url: https://github.com/ArdaDDemir/floating-observatory/discussions
+    about: Ideas and open chat — optional once Discussions is turned on

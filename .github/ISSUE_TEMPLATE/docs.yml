@@ -1,0 +1,31 @@
+name: 📚 Docs / Wiki
+description: Typo, missing guide, or wiki improvement
+title: "[docs] "
+labels: ["documentation"]
+body:
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where?
+      options:
+        - README
+        - docs/ (GUIDE, CUSTOMIZING, ARCHITECTURE, DOCKER…)
+        - GitHub Wiki
+        - In-app Guide / Onboarding
+        - Comments in code
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: What’s wrong or missing?
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested fix / text
+      description: Optional draft wording.
