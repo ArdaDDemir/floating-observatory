@@ -1,0 +1,59 @@
+{
+  "name": "floating-observatory",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Focus sessions that grow a living 3D island — Pomodoro + island builder (Next.js, R3F, Zustand).",
+  "author": "ArdaDDemir",
+  "license": "MIT",
+  "homepage": "https://github.com/ArdaDDemir/floating-observatory#readme",
+  "bugs": {
+    "url": "https://github.com/ArdaDDemir/floating-observatory/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArdaDDemir/floating-observatory.git"
+  },
+  "keywords": [
+    "pomodoro",
+    "focus",
+    "threejs",
+    "react-three-fiber",
+    "nextjs",
+    "pwa",
+    "game",
+    "zustand",
+    "productivity"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "screenshots": "node scripts/capture-screenshots.mjs"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
+    "@react-three/postprocessing": "^3.0.4",
+    "@types/three": "^0.185.1",
+    "framer-motion": "^12.42.2",
+    "lucide-react": "^1.24.0",
+    "next": "16.2.10",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "three": "^0.185.1",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.10",
+    "playwright": "^1.61.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
