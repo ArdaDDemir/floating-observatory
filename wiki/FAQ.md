@@ -29,6 +29,8 @@ No. Everything is **localStorage** on your device. Export a sealed save if you s
 
 MIT license + procedural audio (no sample packs). See repo LICENSE.
 
-### Docker vs Vercel
+### Docker vs Vercel / Netlify / Railway / Render
 
-Both work. Docker is great for self-hosting; Vercel is one-click for the Next app.
+All work. Docker is great for self-hosting; the README has **one-click deploy** badges for Vercel, Netlify, Railway, and Render (no env vars — client-only game).
+
+Vercel button must include the repo (`repository-url=…/floating-observatory`). A bare `vercel.com/new` link does not clone this project.

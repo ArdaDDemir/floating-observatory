@@ -33,12 +33,25 @@ git push -u origin main
 | **Website** | Your Vercel URL after deploy |
 | **Social preview** | Upload a wide PNG of the island (Settings → Social preview) |
 
-## 4. Deploy (Vercel)
+## 4. Deploy (one-click)
+
+README badges clone **https://github.com/ArdaDDemir/floating-observatory** into your account:
+
+| Platform | One-click |
+|----------|-----------|
+| **Vercel** | [Deploy](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FArdaDDemir%2Ffloating-observatory) |
+| **Netlify** | [Deploy](https://app.netlify.com/start/deploy?repository=https://github.com/ArdaDDemir/floating-observatory) |
+| **Railway** | [Deploy](https://railway.app/new/template?template=https://github.com/ArdaDDemir/floating-observatory) |
+| **Render** | [Deploy](https://render.com/deploy?repo=https://github.com/ArdaDDemir/floating-observatory) (`render.yaml`) |
+
+Manual Vercel:
 
 1. Import the GitHub repo  
 2. Framework: Next.js (auto)  
-3. Build: `npm run build` · Output: default  
+3. Build: `npm run build` · Output: default (do **not** set `DOCKER_BUILD`)  
 4. After deploy: open site once online → offline shell + PWA install work  
+
+No env vars required.
 
 ## 5. First-star pitch (optional README top)
 

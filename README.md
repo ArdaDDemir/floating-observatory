@@ -146,11 +146,27 @@ docker build -t floating-observatory .
 docker run --rm -p 3000:3000 floating-observatory
 ```
 
-Production image uses Next.js **`output: "standalone"`** (see `Dockerfile`).
+Production image uses Next.js **`output: "standalone"`** when `DOCKER_BUILD=1` (see `Dockerfile`).
 
-Deploy anywhere that runs Next.js (Vercel one-click works great):
+### One-click deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+Forks the repo into your account and deploys. No env vars required (client-only game).
+
+| Platform | Button |
+|----------|--------|
+| **Vercel** | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FArdaDDemir%2Ffloating-observatory) |
+| **Netlify** | [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ArdaDDemir/floating-observatory) |
+| **Railway** | [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/ArdaDDemir/floating-observatory) |
+| **Render** | [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/ArdaDDemir/floating-observatory) |
+
+Direct links (if a badge fails to load):
+
+- [Deploy on Vercel](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FArdaDDemir%2Ffloating-observatory)
+- [Deploy on Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/ArdaDDemir/floating-observatory)
+- [Deploy on Railway](https://railway.app/new/template?template=https://github.com/ArdaDDemir/floating-observatory)
+- [Deploy on Render](https://render.com/deploy?repo=https://github.com/ArdaDDemir/floating-observatory)
+
+Self-host with **Docker** above, or any host that runs `npm run build && npm start` (Node 20+).
 
 ---
 

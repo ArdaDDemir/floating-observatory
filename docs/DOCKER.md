@@ -33,8 +33,10 @@ docker run --rm -p 3000:3000 floating-observatory
 | Stage | Purpose |
 |-------|---------|
 | `deps` | `npm ci` |
-| `builder` | `next build` with `output: "standalone"` |
+| `builder` | `next build` with `DOCKER_BUILD=1` → `output: "standalone"` |
 | `runner` | Minimal Node 20 Alpine + standalone server |
+
+`DOCKER_BUILD=1` is set only in the image build. Local `npm run build` and PaaS one-click deploys omit it so they use the default Next output.
 
 - App listens on **`0.0.0.0:3000`**
 - Game progress is **browser localStorage** (no DB volume needed)

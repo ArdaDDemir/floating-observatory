@@ -1,0 +1,9 @@
+# One-click deploy: https://app.netlify.com/start/deploy
+# Netlify auto-detects Next.js App Router and applies the Next runtime.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"

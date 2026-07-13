@@ -1,8 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Smaller Docker images — copies only needed files into standalone/
-  output: "standalone",
+  // Standalone only for Docker (see Dockerfile). PaaS one-click
+  // (Vercel / Netlify / Railway / Render) uses the default Next output.
+  ...(process.env.DOCKER_BUILD === "1" ? { output: "standalone" as const } : {}),
 };
 
 export default nextConfig;

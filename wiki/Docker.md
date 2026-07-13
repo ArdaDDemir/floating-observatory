@@ -18,7 +18,7 @@ docker run --rm -p 3000:3000 floating-observatory
 ## Details
 
 - Multi-stage Dockerfile (Node 20 Alpine)
-- Next.js `output: "standalone"`
+- Next.js `output: "standalone"` when `DOCKER_BUILD=1` (Dockerfile only)
 - No DB volume — saves are client-side
 - Healthcheck hits `GET /`
 
